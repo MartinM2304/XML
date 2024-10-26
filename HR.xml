@@ -1,0 +1,30 @@
+
+<hr_catalogue>
+
+	<groups>
+		<group id="1" name="Development">
+			<subgroup id="1.1" name="Frontend">
+				<employee id="0001">
+					<name>Martin Marinkov</name>
+					<rank>Senior</rank>
+					<employment type="full-time" />
+
+					<personal_data>
+						<age>20</age>
+						<experience>2</experience>
+						<salary>10000</salary>
+					</personal_data>
+					
+					<skills>
+						<skill>C++</skill>
+						<skill>C</skill>
+						<skill>Java</skill>
+						<skill>XML</skill>
+					</skills>
+				</employee>
+			</subgroup>
+
+		</group>
+	</groups>
+	
+</hr_catalogue>
