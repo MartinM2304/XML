@@ -1,4 +1,5 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:type="http://www.example/HRCatalogue/types">  <!-- TODO use xmlns:type-->
 
     <xs:simpleType name="rankType">
         <xs:restriction base="xs:string">
@@ -24,7 +25,7 @@
         </xs:simpleContent>
     </xs:complexType>
 
-    <xs:complexType name="personalData">
+    <xs:complexType name="personalDataType">
         <xs:sequence>
             <xs:element name="age" type="xs:nonNegativeInteger"/>
             <xs:element name="experience" type="xs:nonNegativeInteger"/> <!-- TODO Check how is it to make double-->
@@ -49,7 +50,39 @@
                     <xs:attribute name="type" type="employmentType" use="required"/>
                 </xs:complexType>
             </xs:element>
+            <xs:element name="personalData" type="personalDataType"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="subgroupType">
+        <xs:sequence>
+            <xs:element name="employee" type="employeeType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required" />
+        <xs:attribute name="groupRef" type="xs:IDREF" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="groupType">
+        <xs:sequence>
+            <xs:element name="subgroup" type="subgroupType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="hr_catalogue">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="groups" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="group" type="groupType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
 </xs:schema>
