@@ -1,0 +1,55 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="rankType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Junior"/>
+            <xs:enumeration value="Mid"/>
+            <xs:enumeration value="Senior"/>
+            <xs:enumeration value="Intern"/>
+            <xs:enumeration value="Lead"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="employmentType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="full-time"/>
+            <xs:enumeration value="part-time"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="skillType"> <!-- TODO maybe should not have restriction as it may be Java 23-->
+        <xs:simpleContent>
+            <xs:extension base="xs:string"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="personalData">
+        <xs:sequence>
+            <xs:element name="age" type="xs:nonNegativeInteger"/>
+            <xs:element name="experience" type="xs:nonNegativeInteger"/> <!-- TODO Check how is it to make double-->
+            <xs:element name="salary" type="xs:nonNegativeInteger"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="skills">
+        <xs:sequence>
+            <xs:element name="skill" type="skillType" maxOccurs="unbounded" /> <!-- Iskame skills da sysydrja samo <skill> i da sa bezkr mnogo-->
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="employeeType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="rank" type="rankType"/>
+            <xs:element name="employment">
+                <xs:complexType>
+                    <xs:attribute name="type" type="employmentType" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

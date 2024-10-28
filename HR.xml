@@ -1,9 +1,9 @@
 
 <hr_catalogue>
 	<groups>
-		<group id="1" name="Development">
-			<subgroup id="1.1" name="Frontend">
-				<employee id="DF001">	<!-- Development backend 01-->
+		<group id="G1" name="Development">
+			<subgroup id="S1.1" groupRef="G1" name="Frontend">
+				<employee id="DF001">	<!-- Development backend 01--> <!-- TODO: Питай Данков дали employee да е ивзън group-а-->
 					<name>Martin Marinkov</name>
 					<rank>Senior</rank>
 					<employment type="full-time" />
@@ -21,6 +21,7 @@
 						<skill>XML</skill>
 					</skills>
 				</employee>
+
 				<employee id="DF002">
 					<name>Kristian Petrov</name>
 					<rank>Senior</rank>
@@ -41,10 +42,10 @@
 				</employee>
 			</subgroup>
 
-			<subgroup id="1.2" name="BackEnd">
+			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
 					<name>Petar Petrov</name>
-					<rank>Junior</rank>    <!--  TODO make the rank as ENUM  - junior mid, senior,lead, intern-->
+					<rank>Junior</rank>    <!--  TODO make the rank as ENUM  - junior mid, senior,lead, intern -->
 					<employment type="part-time" />
 
 					<personal_data>
@@ -60,12 +61,13 @@
 						<skill>Python</skill>
 					</skills>
 				</employee>
+
 			</subgroup>
 
 		</group>
 			
-		<group id="2" name="Marketing">
-			<subgroup id="2.1" name="DDZ">
+		<group id="G2" name="Marketing">
+			<subgroup id="S2.1" groupRef="G2" name="DDZ">
 				<employee id="M_001"> <!-- Marketing _ 01-->
 					<name>Ivana Ivanova</name>
 					<rank>Intern</rank>
@@ -83,6 +85,8 @@
 				</employee>
 			</subgroup>
 		</group>
+
+		<!-- TODO: Kristian - napishi oshte 2 groups -->
 	</groups>
 	
 </hr_catalogue>
