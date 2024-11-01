@@ -80,13 +80,58 @@
 					</personal_data>
 
 					<skills>
-						<skill>DDZ</skill> <!-- TODO- popylni skills za marketing-->
+						<skill>Content Management</skill> <!-- TODO- popylni skills za marketing-->
+						<skill>Marketing Strategy</skill>
+						<skill>Product Management</skill>
 					</skills>
 				</employee>
 			</subgroup>
 		</group>
 
-		<!-- TODO: Kristian - napishi oshte 2 groups -->
+		<group id="G3" name="Sales">
+			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
+				<employee id="33303"> 
+					<name>John Doey</name>
+					<rank>Senior</rank>
+					<employment type="full-time"/>
+
+					<personal_data>
+						<age>40</age>
+						<experience>5</experience>
+						<salary>15000</salary>
+					</personal_data>
+
+					<skills>
+						<skill>Negotiation</skill>
+						<skill>Creativity</skill>
+						<skill>Stubbornness</skill>
+						<skill>Team Work</skill>
+					</skills>
+				</employee>
+			</subgroup>
+			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
+				<employee id="1231321">
+					<name>Konstantin Ivanov</name>
+					<rank>Middle</rank>
+					<employment type="part-time"/>
+
+					<personal_data>
+						<age>30</age>
+						<experience>2</experience>
+						<salary>5000</salary>
+					</personal_data>
+
+					<skills>
+						<skill>Negotiation</skill>
+						<skill>Domain Knowledge</skill>
+						<skill>Hard Working</skill>
+						<skill>Team Work</skill>
+					</skills>
+				</employee>
+			</subgroup>
+		</group>
+
+		<!-- TODO: Kristian - napishi oshte 1 groups -->
 	</groups>
 	
 </hr_catalogue>
