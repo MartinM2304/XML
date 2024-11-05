@@ -1,4 +1,4 @@
-
+<?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
 <hr_catalogue>
 	<groups>
 		<group id="G1" name="Development">
