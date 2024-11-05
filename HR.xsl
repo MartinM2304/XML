@@ -6,7 +6,7 @@
                 <link rel="stylesheet" type="text/css" href="HR.css"/>
             </head>
             <body>
-                <h2>HR Catalogue</h2>
+                <h1>HR Catalogue</h1>
                 <table border="1">
                     <tr bgcolor="#9acd32">
                         <th>Group Name</th>
