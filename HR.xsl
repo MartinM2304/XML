@@ -3,15 +3,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <style>
-                    body { font-family: Arial, sans-serif; }
-                    h2 { color: #333; }
-                    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-                    th { background-color: #4CAF50; color: white; padding: 8px; }
-                    td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-                    tr:nth-child(even) { background-color: #f2f2f2; }
-                    tr:hover { background-color: #ddd; }
-                </style>
+                <link rel="stylesheet" type="text/css" href="HR.css"/>
             </head>
             <body>
                 <h2>HR Catalogue</h2>
