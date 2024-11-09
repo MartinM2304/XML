@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hr_catalogue [
+    <!ENTITY img SYSTEM "test.jpg">
+]>
+
 <?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
-<hr_catalogue>
+
+<hr_catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.example/HRCatalogue/types HR_Catalogue_schema.xsd"
+		xmlns:type="http://www.example/HRCatalogue/types">
 	<groups>
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">

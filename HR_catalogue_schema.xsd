@@ -1,5 +1,4 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-            xmlns:type="http://www.example/HRCatalogue/types">  <!-- TODO use xmlns:type-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  <!-- TODO use xmlns:type-->
 
     <xs:simpleType name="rankType">
         <xs:restriction base="xs:string">
@@ -28,9 +27,8 @@
     <xs:complexType name="personalDataType">
         <xs:sequence>
             <xs:element name="age" type="xs:nonNegativeInteger"/>
-            <xs:element name="experience" type="xs:nonNegativeInteger"/> <!-- TODO Check how is it to make double-->
+            <xs:element name="experience" type="xs:decimal"/> <!-- TODO Check how is it to make double-->
             <xs:element name="salary" type="xs:nonNegativeInteger"/>
-
         </xs:sequence>
     </xs:complexType>
 
