@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE hr_catalogue [
-    <!ENTITY img SYSTEM "test.jpg">
-]>
+<!DOCTYPE hr_catalogue>
 
 <?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
 
 <hr_catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://www.example/HRCatalogue/types HR_Catalogue_schema.xsd"
-		xmlns:type="http://www.example/HRCatalogue/types">
+	xsi:schemaLocation="http://www.example/HRCatalogue/types HR_Catalogue_schema.xsd"
+	xmlns:type="http://www.example/HRCatalogue/types">
 	<groups>
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">
 				<employee id="DF001">	<!-- Development backend 01--> <!-- TODO: Питай Данков дали employee да е ивзън group-а-->
 					<name>Martin Marinkov</name>
+					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
@@ -41,7 +39,7 @@
 						<experience>2</experience>
 						<salary>10000</salary>
 					</personal_data>
-					
+
 					<skills>
 						<skill>C++</skill>
 						<skill>JavaScript</skill>
@@ -54,7 +52,8 @@
 			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
 					<name>Petar Petrov</name>
-					<rank>Junior</rank>    <!--  TODO make the rank as ENUM  - junior mid, senior,lead, intern -->
+					<rank>Junior</rank>    <!--  TODO make the rank as ENUM  - junior mid, senior,lead,
+					intern -->
 					<employment type="part-time" />
 
 					<personal_data>
@@ -62,7 +61,7 @@
 						<experience>2</experience>
 						<salary>2000</salary>  <!-- salary should be >=0-->
 					</personal_data>
-					
+
 					<skills>
 						<skill>TypeScript</skill>
 						<skill>JavaScript</skill>
@@ -74,13 +73,13 @@
 			</subgroup>
 
 		</group>
-			
+
 		<group id="G2" name="Marketing">
 			<subgroup id="S2.1" groupRef="G2" name="DDZ">
 				<employee id="M_001"> <!-- Marketing _ 01-->
 					<name>Ivana Ivanova</name>
 					<rank>Intern</rank>
-					<employment type="full-time"/>
+					<employment type="full-time" />
 
 					<personal_data>
 						<age>22</age>
@@ -99,10 +98,10 @@
 
 		<group id="G3" name="Sales">
 			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
-				<employee id="33303"> 
+				<employee id="33303">
 					<name>John Doey</name>
 					<rank>Senior</rank>
-					<employment type="full-time"/>
+					<employment type="full-time" />
 
 					<personal_data>
 						<age>40</age>
@@ -122,7 +121,7 @@
 				<employee id="1231321">
 					<name>Konstantin Ivanov</name>
 					<rank>Middle</rank>
-					<employment type="part-time"/>
+					<employment type="part-time" />
 
 					<personal_data>
 						<age>30</age>
@@ -140,7 +139,7 @@
 			</subgroup>
 		</group>
 
-		<!-- TODO: Kristian - napishi oshte 1 groups -->
+		<!-- TODO: Kristian - oshte 1 group -->
 	</groups>
-	
+
 </hr_catalogue>
