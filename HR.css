@@ -1,28 +1,49 @@
-body {
-  font-family: Arial, sans-serif;
-}
 h1 {
-  color: #333;
   text-align: center;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-th {
-  background-color: #4caf50;
-  color: white;
-  padding: 8px;
-}
-td {
+
+.employee-card {
   border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
+  padding: 20px;
+  margin: 15px 10% 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
 }
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+
+.employee-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
 }
-tr:hover {
-  background-color: #ddd;
+
+.employee-info {
+  flex-grow: 1;
+}
+
+.employee-info h2 {
+  margin: 0 0 10px;
+}
+
+.employee-info .section {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.employee-info .section h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 1em;
+}
+
+.employee-info .section p {
+  margin: 5px 0;
 }
