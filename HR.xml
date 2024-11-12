@@ -31,6 +31,7 @@
 
 				<employee id="DF002">
 					<name>Kristian Petrov</name>
+					<photo>kris.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="part-time" />
 
@@ -52,8 +53,8 @@
 			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
 					<name>Petar Petrov</name>
-					<rank>Junior</rank>    <!--  TODO make the rank as ENUM  - junior mid, senior,lead,
-					intern -->
+					<photo>test.jpg</photo>
+					<rank>Junior</rank>
 					<employment type="part-time" />
 
 					<personal_data>
@@ -78,6 +79,7 @@
 			<subgroup id="S2.1" groupRef="G2" name="DDZ">
 				<employee id="M_001"> <!-- Marketing _ 01-->
 					<name>Ivana Ivanova</name>
+					<photo>test.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />
 
@@ -100,6 +102,7 @@
 			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
 				<employee id="33303">
 					<name>John Doey</name>
+					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
@@ -120,6 +123,7 @@
 			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
 				<employee id="1231321">
 					<name>Konstantin Ivanov</name>
+					<photo>test.jpg</photo>
 					<rank>Middle</rank>
 					<employment type="part-time" />
 
