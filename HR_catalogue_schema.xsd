@@ -3,7 +3,6 @@
            xmlns="http://www.example/HRCatalogue/types"
            elementFormDefault="qualified">
 
-  <!-- Root element -->
   <xs:element name="hr_catalogue">
     <xs:complexType>
       <xs:sequence>
@@ -20,7 +19,17 @@
                             <xs:complexType>
                               <xs:sequence>
                                 <xs:element name="name" type="xs:string"/>
-                                <xs:element name="rank" type="xs:string"/>
+                                <xs:element name="rank">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="Junior"/>
+                                            <xs:enumeration value="Mid"/>
+                                            <xs:enumeration value="Senior"/>
+                                            <xs:enumeration value="Intern"/>
+                                            <xs:enumeration value="Lead"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
                                 <xs:element name="employment">
                                   <xs:complexType>
                                     <xs:attribute name="type" type="xs:string" use="required"/>
