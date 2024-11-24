@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:hr="http://www.example/HRCatalogue/types"
-    version="1.0">
+    version="2.0">
     <xsl:output method="html" encoding="UTF-8" />
 
     <!-- Template for the root element -->
@@ -11,8 +11,9 @@
                 <link rel="stylesheet" type="text/css" href="./HR.css" />
             </head>
             <body>
-                <h1>HR Catalogue</h1>
-                <xsl:apply-templates select="hr:groups/hr:group/hr:subgroup/hr:employee" />
+                <xsl:apply-templates select="hr:groups/hr:group/hr:subgroup/hr:employee">
+                    <xsl:sort select="hr:name" data-type="text" order="ascending" />
+                </xsl:apply-templates>
             </body>
         </html>
     </xsl:template>
