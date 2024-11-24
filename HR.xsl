@@ -2,7 +2,6 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html" encoding="UTF-8" />
 
-    <!-- Template to match the root element -->
     <xsl:template match="/hr_catalogue">
         <html>
             <head>
@@ -11,17 +10,14 @@
 
             <body>
                 <h1>HR Catalogue</h1>
-                <!-- Process all groups and subgroups -->
                 <xsl:apply-templates select="groups/group/subgroup/employee" />
             </body>
         </html>
     </xsl:template>
 
-    <!-- Template to match each employee element -->
 
     <xsl:template match="employee">
         <div class="employee-card">
-            <!-- Increased photo size and improved styling -->
             <img class="employee-photo" src="{photo}" alt="Employee Photo" />
 
             <div class="employee-info">
@@ -45,7 +41,6 @@
                     <xsl:value-of select="ancestor::subgroup/@name" />
                 </p>
 
-                <!-- Personal Data Section -->
                 <div class="section">
                     <h3>Personal Data</h3>
                     <p>
@@ -57,7 +52,6 @@
                     <p><strong>Salary:</strong> $<xsl:value-of select="personal_data/salary" /></p>
                 </div>
 
-                <!-- Skills Section -->
                 <div class="section">
                     <h3>Skills</h3>
                     <p>
