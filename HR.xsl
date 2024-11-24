@@ -27,21 +27,26 @@
                     <xsl:value-of select="hr:name" />
                 </h2>
                 <p>
-                    <strong>Rank:</strong>
+                    <strong>Rank: </strong>
                     <xsl:value-of select="hr:rank" />
                 </p>
                 <p>
-                    <strong>Employment Type:</strong>
+                    <strong>Employment Type: </strong>
                     <xsl:value-of select="hr:employment/@type" />
                 </p>
-                <p>
-                    <strong>Group:</strong>
-                    <xsl:value-of select="ancestor::hr:group/@name" />
-                </p>
-                <p>
-                    <strong>Subgroup:</strong>
-                    <xsl:value-of select="ancestor::hr:subgroup/@name" />
-                </p>
+                <div class="section">
+                    <h3>Department</h3>
+                    <div class="department">
+                        <p>
+                            <strong>Group: </strong>
+                            <xsl:value-of select="ancestor::hr:group/@name" />
+                        </p>
+                        <p>
+                            <strong>Subgroup: </strong>
+                            <xsl:value-of select="ancestor::hr:subgroup/@name" />
+                        </p>
+                    </div>
+                </div>
 
                 <div class="section">
                     <h3>Personal Data</h3>

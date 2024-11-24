@@ -79,3 +79,10 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: large;
 }
+
+.department {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 10px;
+}
