@@ -45,25 +45,32 @@
 
                 <div class="section">
                     <h3>Personal Data</h3>
-                    <p>
-                        <strong>Age:</strong>
-                        <xsl:value-of select="hr:personal_data/hr:age" />
-                    </p>
-                    <p><strong>Experience:</strong> <xsl:value-of
-                            select="hr:personal_data/hr:experience" /> years</p>
-                    <p><strong>Salary:</strong> $<xsl:value-of select="hr:personal_data/hr:salary" /></p>
+                    <div class="personal-data">
+                        <p>
+                            <strong>Age: </strong>
+                            <xsl:value-of select="hr:personal_data/hr:age" />
+                        </p>
+                        <p>
+                            <strong>Experience: </strong>
+                            <xsl:value-of select="hr:personal_data/hr:experience" />
+                            <span> years</span>
+                        </p>
+                        <p>
+                            <strong>Salary: </strong>$ <xsl:value-of
+                                select="hr:personal_data/hr:salary" />
+                        </p>
+                    </div>
                 </div>
 
                 <div class="section">
                     <h3>Skills</h3>
-                    <p>
+                    <div class="skills">
                         <xsl:for-each select="hr:skills/hr:skill">
-                            <span>
+                            <p>
                                 <xsl:value-of select="." />
-                                <xsl:if test="position() != last()">, </xsl:if>
-                            </span>
+                            </p>
                         </xsl:for-each>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
