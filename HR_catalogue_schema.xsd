@@ -3,81 +3,80 @@
   xmlns="http://www.example/HRCatalogue/types"
   elementFormDefault="qualified">
 
-  <xs:element name="hr_catalogue">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="groups">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="group" maxOccurs="unbounded">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="subgroup" maxOccurs="unbounded">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="employee" maxOccurs="unbounded">
-                            <xs:complexType>
-                              <xs:sequence>
-                                <xs:element name="name" type="xs:string" />
-                                <xs:element name="photo" type="xs:string" minOccurs="0" />
-                                <xs:element name="rank">
-                                  <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                      <xs:enumeration value="Junior" />
-                                      <xs:enumeration value="Mid" />
-                                      <xs:enumeration value="Senior" />
-                                      <xs:enumeration value="Intern" />
-                                      <xs:enumeration value="Lead" />
-                                    </xs:restriction>
-                                  </xs:simpleType>
-                                </xs:element>
-                                <xs:element name="employment">
-                                  <xs:complexType>
-                                    <xs:attribute name="type" use="required">
-                                      <xs:simpleType>
-                                        <xs:restriction base="xs:string">
-                                          <xs:enumeration value="part-time" />
-                                          <xs:enumeration value="full-time" />
-                                        </xs:restriction>
-                                      </xs:simpleType>
-                                    </xs:attribute>
-                                  </xs:complexType>
-                                </xs:element>
-                                <xs:element name="personal_data">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="age" type="xs:integer" />
-                                      <xs:element name="experience" type="xs:integer" />
-                                      <xs:element name="salary" type="xs:decimal" />
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
-                                <xs:element name="skills">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="skill" type="xs:string"
-                                        maxOccurs="unbounded" />
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
-                              </xs:sequence>
-                              <xs:attribute name="id" type="xs:string" use="required" />
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:sequence>
-                        <xs:attribute name="id" type="xs:string" use="required" />
-                        <xs:attribute name="name" type="xs:string" use="required" />
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                  <xs:attribute name="id" type="xs:string" use="required" />
-                  <xs:attribute name="name" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="hr_catalogue" type="HrCatalogueType" />
+
+  <xs:complexType name="HrCatalogueType">
+    <xs:sequence>
+      <xs:element name="groups" type="GroupsType" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GroupsType">
+    <xs:sequence>
+      <xs:element name="group" type="GroupType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GroupType">
+    <xs:sequence>
+      <xs:element name="subgroup" type="SubgroupType" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="SubgroupType">
+    <xs:sequence>
+      <xs:element name="employee" type="EmployeeType" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+    <xs:attribute name="name" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="EmployeeType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="photo" type="xs:string" minOccurs="0" />
+      <xs:element name="rank" type="RankType" />
+      <xs:element name="employment" type="EmploymentType" />
+      <xs:element name="personal_data" type="PersonalDataType" />
+      <xs:element name="skills" type="SkillsType" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="RankType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Junior" />
+      <xs:enumeration value="Mid" />
+      <xs:enumeration value="Senior" />
+      <xs:enumeration value="Intern" />
+      <xs:enumeration value="Lead" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="EmploymentType">
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="part-time" />
+          <xs:enumeration value="full-time" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="PersonalDataType">
+    <xs:sequence>
+      <xs:element name="age" type="xs:integer" />
+      <xs:element name="experience" type="xs:integer" />
+      <xs:element name="salary" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SkillsType">
+    <xs:sequence>
+      <xs:element name="skill" type="xs:string" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>
