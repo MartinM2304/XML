@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.example/HRCatalogue/types HR_Catalogue_schema.xsd">
 	<groups>
 		<group id="G1" name="Development">
-			<subgroup id="S1.1" groupRef="G1" name="Frontend">
+			<subgroup id="S1.1" name="Frontend">
 				<employee id="DF001">	<!-- Development backend 01--> <!-- TODO: Питай Данков дали employee да е ивзън group-а-->
 					<name>Martin Marinkov</name>
 					<photo>test.jpg</photo>
@@ -46,7 +46,7 @@
 				</employee>
 			</subgroup>
 
-			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
+			<subgroup id="S1.2" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
 					<name>Petar Petrov</name>
 					<photo>test.jpg</photo>
@@ -72,7 +72,7 @@
 		</group>
 
 		<group id="G2" name="Marketing">
-			<subgroup id="S2.1" groupRef="G2" name="DDZ">
+			<subgroup id="S2.1" name="DDZ">
 				<employee id="M_001"> <!-- Marketing _ 01-->
 					<name>Ivana Ivanova</name>
 					<photo>test.jpg</photo>
@@ -95,7 +95,7 @@
 		</group>
 
 		<group id="G3" name="Sales">
-			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
+			<subgroup id="S3.1" name="Customer Sales">
 				<employee id="33303">
 					<name>John Doey</name>
 					<photo>test.jpg</photo>
@@ -116,11 +116,11 @@
 					</skills>
 				</employee>
 			</subgroup>
-			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
+			<subgroup id="S3.2" name="Business Sales">
 				<employee id="1231321">
 					<name>Konstantin Ivanov</name>
 					<photo>test.jpg</photo>
-					<rank>Middle</rank>
+					<rank>Mid</rank>
 					<employment type="part-time" />
 
 					<personal_data>
