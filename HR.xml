@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hr_catalogue>
+<?xml-stylesheet type="text/xsl" href="HR.xsl"?>
 <hr_catalogue xmlns="http://www.example/HRCatalogue/types"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.example/HRCatalogue/types HR_Catalogue_schema.xsd">
