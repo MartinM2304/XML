@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hr_catalogue>
 
 <?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
 
 <hr_catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.example/HRCatalogue/types HR_Catalogue_schema.xsd"
-	xmlns:type="http://www.example/HRCatalogue/types">
+		xsi:noNamespaceSchemaLocation="HR_Catalogue_schema.xsd">
 	<groups>
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">
@@ -100,7 +98,7 @@
 
 		<group id="G3" name="Sales">
 			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
-				<employee id="33303">
+				<employee id="E04">
 					<name>John Doey</name>
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
@@ -121,10 +119,10 @@
 				</employee>
 			</subgroup>
 			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
-				<employee id="1231321">
+				<employee id="E_06">
 					<name>Konstantin Ivanov</name>
 					<photo>test.jpg</photo>
-					<rank>Middle</rank>
+					<rank>Mid</rank>
 					<employment type="part-time" />
 
 					<personal_data>
