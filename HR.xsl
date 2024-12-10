@@ -1,73 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:hr="http://www.example/HRCatalogue/types"
+    version="2.0">
     <xsl:output method="html" encoding="UTF-8" />
 
-    <!-- Template to match the root element -->
-    <xsl:template match="/hr_catalogue">
+    <!-- Template for the root element -->
+    <xsl:template match="/hr:hr_catalogue">
         <html>
             <head>
                 <link rel="stylesheet" type="text/css" href="./HR.css" />
             </head>
-
             <body>
-                <h1>HR Catalogue</h1>
-                <!-- Process all groups and subgroups -->
-                <xsl:apply-templates select="groups/group/subgroup/employee" />
+                <xsl:apply-templates select="hr:groups/hr:group/hr:subgroup/hr:employee">
+                    <xsl:sort select="hr:name" data-type="text" order="ascending" />
+                </xsl:apply-templates>
             </body>
         </html>
     </xsl:template>
 
-    <!-- Template to match each employee element -->
-
-    <xsl:template match="employee">
+    <!-- Template for employee -->
+    <xsl:template match="hr:employee">
         <div class="employee-card">
-            <!-- Increased photo size and improved styling -->
-            <img class="employee-photo" src="{photo}" alt="Employee Photo" />
+            <img class="employee-photo" src="{hr:photo}" alt="Employee Photo" />
 
             <div class="employee-info">
                 <h2>
-                    <xsl:value-of select="name" />
+                    <xsl:value-of select="hr:name" />
                 </h2>
                 <p>
-                    <strong>Rank:</strong>
-                    <xsl:value-of select="rank" />
+                    <strong>Rank: </strong>
+                    <xsl:value-of select="hr:rank" />
                 </p>
                 <p>
-                    <strong>Employment Type:</strong>
-                    <xsl:value-of select="employment/@type" />
+                    <strong>Employment Type: </strong>
+                    <xsl:value-of select="hr:employment/@type" />
                 </p>
-                <p>
-                    <strong>Group:</strong>
-                    <xsl:value-of select="ancestor::group/@name" />
-                </p>
-                <p>
-                    <strong>Subgroup:</strong>
-                    <xsl:value-of select="ancestor::subgroup/@name" />
-                </p>
-
-                <!-- Personal Data Section -->
                 <div class="section">
-                    <h3>Personal Data</h3>
-                    <p>
-                        <strong>Age:</strong>
-                        <xsl:value-of select="personal_data/age" />
-                    </p>
-                    <p><strong>Experience:</strong> <xsl:value-of select="personal_data/experience" />
-        years</p>
-                    <p><strong>Salary:</strong> $<xsl:value-of select="personal_data/salary" /></p>
+                    <h3>Department</h3>
+                    <div class="department">
+                        <p>
+                            <strong>Group: </strong>
+                            <xsl:value-of select="ancestor::hr:group/@name" />
+                        </p>
+                        <p>
+                            <strong>Subgroup: </strong>
+                            <xsl:value-of select="ancestor::hr:subgroup/@name" />
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Skills Section -->
+                <div class="section">
+                    <h3>Personal Data</h3>
+                    <div class="personal-data">
+                        <p>
+                            <strong>Age: </strong>
+                            <xsl:value-of select="hr:personal_data/hr:age" />
+                        </p>
+                        <p>
+                            <strong>Experience: </strong>
+                            <xsl:value-of select="hr:personal_data/hr:experience" />
+                            <span> years</span>
+                        </p>
+                        <p>
+                            <strong>Salary: </strong>$ <xsl:value-of
+                                select="hr:personal_data/hr:salary" />
+                        </p>
+                    </div>
+                </div>
+
                 <div class="section">
                     <h3>Skills</h3>
-                    <p>
-                        <xsl:for-each select="skills/skill">
-                            <span>
+                    <div class="skills">
+                        <xsl:for-each select="hr:skills/hr:skill">
+                            <p>
                                 <xsl:value-of select="." />
-                                <xsl:if test="position() != last()">, </xsl:if>
-                            </span>
+                            </p>
                         </xsl:for-each>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
