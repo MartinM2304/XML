@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 
 <?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
 
 <hr_catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:noNamespaceSchemaLocation="HR_Catalogue_schema.xsd">
-=======
-<!DOCTYPE hr_catalogue>
-<?xml-stylesheet type="text/xsl" href="HR.xsl"?>
-<hr_catalogue xmlns="http://www.example/HRCatalogue/types"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.example/HRCatalogue/types HR_Catalogue_schema.xsd">
->>>>>>> d5997e96465e9cf75cd543bf0fea6eb0117dc034
 	<groups>
 		<group id="G1" name="Development">
-			<subgroup id="S1.1" name="Frontend">
+			<subgroup id="S1.1" groupRef="G1" name="Frontend">
 				<employee id="DF001">	<!-- Development backend 01--> <!-- TODO: Питай Данков дали employee да е ивзън group-а-->
 					<name>Martin Marinkov</name>
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
+
+					<gallery> <image source="image1"/></gallery>
 
 					<personal_data>
 						<age>20</age>
@@ -56,7 +50,7 @@
 				</employee>
 			</subgroup>
 
-			<subgroup id="S1.2" name="BackEnd">
+			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
 					<name>Petar Petrov</name>
 					<photo>test.jpg</photo>
@@ -82,7 +76,7 @@
 		</group>
 
 		<group id="G2" name="Marketing">
-			<subgroup id="S2.1" name="DDZ">
+			<subgroup id="S2.1" groupRef="G2" name="DDZ">
 				<employee id="M_001"> <!-- Marketing _ 01-->
 					<name>Ivana Ivanova</name>
 					<photo>test.jpg</photo>

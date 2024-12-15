@@ -44,11 +44,24 @@
             <xs:element name="photo" type="xs:string" minOccurs="0"/>
             <xs:element name="rank" type="rankType"/>
             <xs:element name="employment" type="employmentTypeElement"/>
+            <xs:element name="gallery" minOccurs="0" />
             <xs:element name="personal_data" type="personalDataType"/>
             <xs:element name="skills" type="skillsType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
     </xs:complexType>
+
+    <xs:complexType name="imageType">
+        <xs:attribute name="source" type="xs:ENTITY" use="required" />
+    </xs:complexType>
+
+    <xs:element name="gallery">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="image" type="imageType" minOccurs="1" maxOccurs="100" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
     <xs:complexType name="subgroupType">
         <xs:sequence>
