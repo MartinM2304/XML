@@ -3,7 +3,7 @@
 <?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
 
 <hr_catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="HR_Catalogue_schema.xsd">
+	xsi:noNamespaceSchemaLocation="HR_Catalogue_schema.xsd">
 	<groups>
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">
@@ -13,7 +13,8 @@
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
-					<gallery> <image source="image1"/></gallery>
+					<gallery>
+						<image source="image1" /></gallery>
 
 					<personal_data>
 						<age>20</age>
