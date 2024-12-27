@@ -7,7 +7,7 @@
 	<groups>
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">
-				<employee id="DF001">	<!-- Development backend 01--> <!-- TODO: Питай Данков дали employee да е ивзън group-а-->
+				<employee id="DF001">
 					<name>Martin Marinkov</name>
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
@@ -143,8 +143,6 @@
 				</employee>
 			</subgroup>
 		</group>
-
-		<!-- TODO: Kristian - oshte 1 group -->
 	</groups>
 
 </hr_catalogue>
