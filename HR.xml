@@ -7,8 +7,8 @@
 	<groups>
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">
-				<employee id="DF001">	<!-- Development backend 01--> <!-- TODO: Питай Данков дали employee да е ивзън group-а-->
-					<name>Martin Marinkov</name>
+				<employee id="DF001">
+					
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
@@ -16,6 +16,7 @@
 					<gallery> <image source="image1"/></gallery>
 
 					<personal_data>
+						<name>Martin Marinkov</name>
 						<age>20</age>
 						<experience>2</experience>
 						<salary>10000</salary>
@@ -30,12 +31,13 @@
 				</employee>
 
 				<employee id="DF002">
-					<name>Kristian Petrov</name>
+					
 					<photo>kris.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="part-time" />
 
 					<personal_data>
+						<name>Kristian Petrov</name>
 						<age>21</age>
 						<experience>2</experience>
 						<salary>10000</salary>
@@ -52,12 +54,13 @@
 
 			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
-					<name>Petar Petrov</name>
+					
 					<photo>test.jpg</photo>
 					<rank>Junior</rank>
 					<employment type="part-time" />
 
 					<personal_data>
+						<name>Petar Petrov</name>
 						<age>31</age>
 						<experience>2</experience>
 						<salary>2000</salary>  <!-- salary should be >=0-->
@@ -78,12 +81,13 @@
 		<group id="G2" name="Marketing">
 			<subgroup id="S2.1" groupRef="G2" name="DDZ">
 				<employee id="M_001"> <!-- Marketing _ 01-->
-					<name>Ivana Ivanova</name>
+					
 					<photo>test.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />
 
 					<personal_data>
+						<name>Ivana Ivanova</name>
 						<age>22</age>
 						<experience>0</experience>
 						<salary>1500</salary>
@@ -101,12 +105,13 @@
 		<group id="G3" name="Sales">
 			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
 				<employee id="E04">
-					<name>John Doey</name>
+					
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
 					<personal_data>
+						<name>John Doey</name>
 						<age>40</age>
 						<experience>5</experience>
 						<salary>15000</salary>
@@ -122,12 +127,13 @@
 			</subgroup>
 			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
 				<employee id="E_06">
-					<name>Konstantin Ivanov</name>
+					
 					<photo>test.jpg</photo>
 					<rank>Mid</rank>
 					<employment type="part-time" />
 
 					<personal_data>
+						<name>Konstantin Ivanov</name>
 						<age>30</age>
 						<experience>2</experience>
 						<salary>5000</salary>

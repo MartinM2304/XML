@@ -22,7 +22,14 @@
     <!-- Complex Types -->
     <xs:complexType name="personalDataType">
         <xs:sequence>
-            <xs:element name="age" type="xs:integer"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="age">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="18"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
             <xs:element name="experience" type="xs:integer"/>
             <xs:element name="salary" type="xs:decimal"/>
         </xs:sequence>
@@ -40,7 +47,7 @@
 
     <xs:complexType name="employeeType">
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
+            
             <xs:element name="photo" type="xs:string" minOccurs="0"/>
             <xs:element name="rank" type="rankType"/>
             <xs:element name="employment" type="employmentTypeElement"/>
