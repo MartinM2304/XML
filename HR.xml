@@ -3,17 +3,17 @@
 <?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
 
 <hr_catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="HR_Catalogue_schema.xsd">
+	xsi:noNamespaceSchemaLocation="HR_Catalogue_schema.xsd">
 	<groups>
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">
 				<employee id="DF001">
-					
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
-					<gallery> <image source="image1"/></gallery>
+					<gallery>
+						<image source="image1" /></gallery>
 
 					<personal_data>
 						<name>Martin Marinkov</name>
@@ -54,7 +54,6 @@
 
 			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
-					
 					<photo>test.jpg</photo>
 					<rank>Junior</rank>
 					<employment type="part-time" />
@@ -81,7 +80,6 @@
 		<group id="G2" name="Marketing">
 			<subgroup id="S2.1" groupRef="G2" name="DDZ">
 				<employee id="M_001"> <!-- Marketing _ 01-->
-					
 					<photo>test.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />
@@ -105,7 +103,6 @@
 		<group id="G3" name="Sales">
 			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
 				<employee id="E04">
-					
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
@@ -127,7 +124,6 @@
 			</subgroup>
 			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
 				<employee id="E_06">
-					
 					<photo>test.jpg</photo>
 					<rank>Mid</rank>
 					<employment type="part-time" />
@@ -148,8 +144,6 @@
 				</employee>
 			</subgroup>
 		</group>
-
-		<!-- TODO: Kristian - oshte 1 group -->
 	</groups>
 
 </hr_catalogue>
