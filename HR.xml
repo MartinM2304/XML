@@ -32,7 +32,7 @@
 
 				<employee id="DF002">
 					
-					<photo>kris.jpg</photo>
+					<photo>resources/kris.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="part-time" />
 
@@ -62,7 +62,7 @@
 						<name>Petar Petrov</name>
 						<age>31</age>
 						<experience>2</experience>
-						<salary>2000</salary>  <!-- salary should be >=0-->
+						<salary>2000</salary>
 					</personal_data>
 
 					<skills>
@@ -73,13 +73,52 @@
 					</skills>
 				</employee>
 
+				<employee id="DB003"> 
+					<photo>test.jpg</photo>
+					<rank>Junior</rank>
+					<employment type="part-time" />
+
+					<personal_data>
+						<name>Boyan Todorov</name>
+						<age>20</age>
+						<experience>2</experience>
+						<salary>2200</salary> 
+					</personal_data>
+
+					<skills>
+						<skill>C++</skill>
+						<skill>Bash</skill>
+						<skill>Python</skill>
+					</skills>
+				</employee>
+
 			</subgroup>
 
 		</group>
 
 		<group id="G2" name="Marketing">
-			<subgroup id="S2.1" groupRef="G2" name="DDZ">
-				<employee id="M_001"> <!-- Marketing _ 01-->
+			<subgroup id="S2.1" groupRef="G2" name="Social Marketing">
+				<employee id="MS001"> <!-- Marketing _ 01-->
+					<photo>test.jpg</photo>
+					<rank>Intern</rank>
+					<employment type="full-time" />
+
+					<personal_data>
+						<name>Ivana Ivanova</name>
+						<age>22</age>
+						<experience>0</experience>
+						<salary>1500</salary>
+					</personal_data>
+
+					<skills>
+						<skill>Content Management</skill> <!-- TODO- popylni skills za marketing-->
+						<skill>Marketing Strategy</skill>
+						<skill>Product Management</skill>
+					</skills>
+				</employee>
+			</subgroup>
+			<subgroup id="S2.2" groupRef="G2" name="Content Marketing">
+				<employee id="MC002"> <!-- Marketing _ 01-->
 					<photo>test.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />
@@ -102,13 +141,13 @@
 
 		<group id="G3" name="Sales">
 			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
-				<employee id="E04">
+				<employee id="SC04">
 					<photo>test.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
 					<personal_data>
-						<name>John Doey</name>
+						<name>Georgi Ivanov</name>
 						<age>40</age>
 						<experience>5</experience>
 						<salary>15000</salary>
@@ -123,7 +162,7 @@
 				</employee>
 			</subgroup>
 			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
-				<employee id="E_06">
+				<employee id="SB06">
 					<photo>test.jpg</photo>
 					<rank>Mid</rank>
 					<employment type="part-time" />

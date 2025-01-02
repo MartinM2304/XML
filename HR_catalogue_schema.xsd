@@ -21,16 +21,16 @@
     <!-- Complex Types -->
     <xs:complexType name="personalDataType">
         <xs:sequence>
-        <xs:element name="name" type="xs:string" />
-        <xs:element name="age" type="xs:integer" />
-        <xs:element name="experience" type="xs:integer" />
-        <xs:element name="salary" type="xs:decimal" />
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="age" type="xs:integer" />
+            <xs:element name="experience" type="xs:integer" />
+            <xs:element name="salary" type="xs:decimal" />
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="skillsType">
         <xs:sequence>
-        <xs:element name="skill" type="xs:string" maxOccurs="unbounded" />
+            <xs:element name="skill" type="xs:string" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
@@ -40,13 +40,12 @@
 
     <xs:complexType name="employeeType">
         <xs:sequence>
-        
-        <xs:element name="photo" type="xs:string" minOccurs="0" />
-        <xs:element name="rank" type="rankType" />
-        <xs:element name="employment" type="employmentTypeElement" />
-        <xs:element name="gallery" minOccurs="0" />
-        <xs:element name="personal_data" type="personalDataType" />
-        <xs:element name="skills" type="skillsType" />
+            <xs:element name="photo" type="xs:string" minOccurs="0" />
+            <xs:element name="rank" type="rankType" />
+            <xs:element name="employment" type="employmentTypeElement" />
+            <xs:element name="gallery" minOccurs="0" />
+            <xs:element name="personal_data" type="personalDataType" />
+            <xs:element name="skills" type="skillsType" />
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required" />
     </xs:complexType>
@@ -65,7 +64,7 @@
 
     <xs:complexType name="subgroupType">
         <xs:sequence>
-        <xs:element name="employee" type="employeeType" maxOccurs="unbounded" />
+            <xs:element name="employee" type="employeeType" maxOccurs="unbounded" />
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required" />
         <xs:attribute name="name" type="xs:string" use="required" />
@@ -74,12 +73,8 @@
 
     <xs:complexType name="groupType">
         <xs:sequence>
-        <xs:element name="subgroup" type="subgroupType" maxOccurs="unbounded">
-            <!-- <xs:keyref name="groupReference" refer="groupKey">
-                <xs:selector xpath="." />
-                <xs:field xpath="@groupRef" />
-            </xs:keyref> -->
-        </xs:element>
+            <xs:element name="subgroup" type="subgroupType" maxOccurs="unbounded">
+            </xs:element>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required" />
         <xs:attribute name="name" type="xs:string" use="required" />

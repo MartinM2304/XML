@@ -12,7 +12,7 @@
             </head>
             <body>
                 <xsl:apply-templates select="groups/group/subgroup/employee">
-                    <xsl:sort select="name" data-type="text" order="ascending" />
+                    <xsl:sort select="personal_data/name" data-type="text" order="ascending" />
                 </xsl:apply-templates>
             </body>
         </html>
@@ -25,7 +25,7 @@
 
             <div class="employee-info">
                 <h2>
-                    <xsl:value-of select="name" />
+                    <xsl:value-of select="personal_data/name" />
                 </h2>
                 <p>
                     <strong>Rank: </strong>
