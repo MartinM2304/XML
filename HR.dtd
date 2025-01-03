@@ -1,0 +1,30 @@
+<!ELEMENT hr_catalogue (groups+)>
+
+<!ELEMENT groups (group+)>
+
+<!ELEMENT group (subgroup+)>
+<!ATTLIST group id ID #REQUIRED>
+<!ATTLIST group name CDATA #REQUIRED> 
+
+<!ELEMENT subgroup (employee+)>
+<!ATTLIST subgroup id ID #REQUIRED>
+<!ATTLIST subgroup name CDATA #REQUIRED> 
+<!ATTLIST subgroup groupRef IDREF #REQUIRED>
+
+<!ELEMENT employee (photo?,rank,employment,gallery?,personal_data,skills)>
+<!ATTLIST employee id ID #REQUIRED>
+<!ELEMENT photo (#PCDATA)>
+<!ELEMENT rank (#PCDATA)>
+<!ELEMENT employment (#PCDATA)>
+<!ATTLIST employment type CDATA #REQUIRED>
+<!ELEMENT gallery (image)>
+<!ELEMENT image (#PCDATA)>
+<!ATTLIST image source CDATA #REQUIRED>
+<!ELEMENT skills (skill*)>
+<!ELEMENT skill (#PCDATA)>
+
+<!ELEMENT personal_data (name,age,experience,salary)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT experience (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>

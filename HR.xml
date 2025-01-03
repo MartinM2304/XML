@@ -2,6 +2,11 @@
 
 <?xml-stylesheet type = "text/xsl" href = "HR.xsl"?>
 
+<!DOCTYPE hr_catalogue SYSTEM "HR.dtd" [
+	<!ATTLIST hr_catalogue
+		xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation CDATA #FIXED "HR_Catalogue_schema.xsd">]>
+		
 <hr_catalogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="HR_Catalogue_schema.xsd">
 	<groups>
@@ -13,7 +18,8 @@
 					<employment type="full-time" />
 
 					<gallery>
-						<image source="image1" /></gallery>
+						<image source="image1" />
+					</gallery>
 
 					<personal_data>
 						<name>Martin Marinkov</name>
@@ -61,8 +67,8 @@
 					<personal_data>
 						<name>Petar Petrov</name>
 						<age>31</age>
-						<experience>2</experience>
-						<salary>2000</salary>
+						<experience>12</experience>
+						<salary>9000</salary>
 					</personal_data>
 
 					<skills>
@@ -80,7 +86,7 @@
 
 					<personal_data>
 						<name>Boyan Todorov</name>
-						<age>20</age>
+						<age>22</age>
 						<experience>2</experience>
 						<salary>2200</salary> 
 					</personal_data>
@@ -104,14 +110,13 @@
 					<employment type="full-time" />
 
 					<personal_data>
-						<name>Ivana Ivanova</name>
+						<name>Iva Zdravkova</name>
 						<age>22</age>
-						<experience>0</experience>
-						<salary>1500</salary>
+						<experience>13</experience>
+						<salary>6000</salary>
 					</personal_data>
 
 					<skills>
-						<skill>Content Management</skill> <!-- TODO- popylni skills za marketing-->
 						<skill>Marketing Strategy</skill>
 						<skill>Product Management</skill>
 					</skills>
@@ -131,7 +136,7 @@
 					</personal_data>
 
 					<skills>
-						<skill>Content Management</skill> <!-- TODO- popylni skills za marketing-->
+						<skill>Content Management</skill>
 						<skill>Marketing Strategy</skill>
 						<skill>Product Management</skill>
 					</skills>
