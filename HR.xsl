@@ -4,7 +4,6 @@
     version="2.0">
     <xsl:output method="html" encoding="UTF-8" />
 
-    <!-- Template for the root element -->
     <xsl:template match="/hr_catalogue">
         <html>
             <head>
@@ -18,7 +17,6 @@
         </html>
     </xsl:template>
 
-    <!-- Template for employee -->
     <xsl:template match="employee">
         <div class="employee-card">
             <img class="employee-photo" src="{photo}" alt="Employee Photo" />
