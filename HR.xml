@@ -13,7 +13,7 @@
 		<group id="G1" name="Development">
 			<subgroup id="S1.1" groupRef="G1" name="Frontend">
 				<employee id="DF001">
-					<photo>test.jpg</photo>
+					<photo>resources/martin_marinkov.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
@@ -38,7 +38,7 @@
 
 				<employee id="DF002">
 					
-					<photo>resources/kris.jpg</photo>
+					<photo>resources/kristian_petrov.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="part-time" />
 
@@ -60,12 +60,12 @@
 
 			<subgroup id="S1.2" groupRef="G1" name="BackEnd">
 				<employee id="DB002"> <!-- Development backend 02-->
-					<photo>test.jpg</photo>
+					<photo>resources/alex_vasquez.jpg</photo>
 					<rank>Junior</rank>
 					<employment type="part-time" />
 
 					<personal_data>
-						<name>Petar Petrov</name>
+						<name>Alex Vasquez</name>
 						<age>31</age>
 						<experience>12</experience>
 						<salary>9000</salary>
@@ -74,13 +74,13 @@
 					<skills>
 						<skill>TypeScript</skill>
 						<skill>JavaScript</skill>
-						<skill>Ruby</skill>
-						<skill>Python</skill>
+						<skill>App design</skill>
+						<skill>Web developer</skill>
 					</skills>
 				</employee>
 
 				<employee id="DB003"> 
-					<photo>test.jpg</photo>
+					<photo>resources/boian_todorv.jpg</photo>
 					<rank>Junior</rank>
 					<employment type="part-time" />
 
@@ -105,15 +105,15 @@
 		<group id="G2" name="Marketing">
 			<subgroup id="S2.1" groupRef="G2" name="Social Marketing">
 				<employee id="MS001"> <!-- Marketing _ 01-->
-					<photo>test.jpg</photo>
+					<photo>resources/Ecom_Success.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />
 
 					<personal_data>
-						<name>Iva Zdravkova</name>
-						<age>22</age>
-						<experience>13</experience>
-						<salary>6000</salary>
+						<name>Ecom Success</name>
+						<age>30</age>
+						<experience>8</experience>
+						<salary>12000</salary>
 					</personal_data>
 
 					<skills>
@@ -124,15 +124,15 @@
 			</subgroup>
 			<subgroup id="S2.2" groupRef="G2" name="Content Marketing">
 				<employee id="MC002"> <!-- Marketing _ 01-->
-					<photo>test.jpg</photo>
+					<photo>resources/abdul_raheem.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />
 
 					<personal_data>
-						<name>Ivana Ivanova</name>
-						<age>22</age>
-						<experience>0</experience>
-						<salary>1500</salary>
+						<name>Abdul Raheem</name>
+						<age>33</age>
+						<experience>11</experience>
+						<salary>8000</salary>
 					</personal_data>
 
 					<skills>
@@ -147,12 +147,12 @@
 		<group id="G3" name="Sales">
 			<subgroup id="S3.1" groupRef="G3" name="Customer Sales">
 				<employee id="SC04">
-					<photo>test.jpg</photo>
+					<photo>resources/kaffla_imran.jpg</photo>
 					<rank>Senior</rank>
 					<employment type="full-time" />
 
 					<personal_data>
-						<name>Georgi Ivanov</name>
+						<name>Kaffla Imran</name>
 						<age>40</age>
 						<experience>5</experience>
 						<salary>15000</salary>
@@ -168,12 +168,12 @@
 			</subgroup>
 			<subgroup id="S3.2" groupRef="G3" name="Business Sales">
 				<employee id="SB06">
-					<photo>test.jpg</photo>
+					<photo>resources/Enzo_morana.jpg</photo>
 					<rank>Mid</rank>
 					<employment type="part-time" />
 
 					<personal_data>
-						<name>Konstantin Ivanov</name>
+						<name>Enzo Morana</name>
 						<age>30</age>
 						<experience>2</experience>
 						<salary>5000</salary>
