@@ -104,7 +104,7 @@
 
 		<group id="G2" name="Marketing">
 			<subgroup id="S2.1" groupRef="G2" name="Social Marketing">
-				<employee id="MS001"> <!-- Marketing _ 01-->
+				<employee id="MS001">
 					<photo>resources/Ecom_Success.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />
@@ -123,7 +123,7 @@
 				</employee>
 			</subgroup>
 			<subgroup id="S2.2" groupRef="G2" name="Content Marketing">
-				<employee id="MC002"> <!-- Marketing _ 01-->
+				<employee id="MC002">
 					<photo>resources/abdul_raheem.jpg</photo>
 					<rank>Intern</rank>
 					<employment type="full-time" />

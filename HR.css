@@ -24,6 +24,11 @@ h1 {
   margin-right: 20px;
   border-radius: 8px;
   border: 2px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.employee-photo:hover{
+  transform: scale(1.5);
 }
 
 .employee-info {
