@@ -10,6 +10,7 @@
                 <link rel="stylesheet" type="text/css" href="./HR.css" />
             </head>
             <body>
+                <h1 id="title">Human Resources Catalog</h1>
                 <xsl:apply-templates select="groups/group/subgroup/employee">
                     <xsl:sort select="personal_data/name" data-type="text" order="ascending" />
                 </xsl:apply-templates>

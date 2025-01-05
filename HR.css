@@ -4,6 +4,10 @@ body {
 
 h1 {
   text-align: center;
+  margin: 2rem 16rem;
+  background-color: #c0f9f9;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .employee-card {
@@ -27,7 +31,7 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-.employee-photo:hover{
+.employee-photo:hover {
   transform: scale(1.5);
 }
 
